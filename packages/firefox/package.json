@@ -1,0 +1,28 @@
+{
+  "name": "firefox",
+  "display_name": "Mozilla Firefox",
+  "version": "latest",
+  "architecture": [
+    "x86_64"
+  ],
+  "platform": "SolverUNIX",
+  "type": "upstream-binary",
+  "archive_format": "auto-detect",
+  "source": {
+    "vendor": "Mozilla",
+    "url": "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US",
+    "homepage": "https://www.mozilla.org/firefox/",
+    "license": "MPL-2.0"
+  },
+  "install": {
+    "scope": "user",
+    "prefix": "$HOME/.local/opt/firefox",
+    "executable": "$HOME/.local/bin/firefox",
+    "desktop_entry": "$HOME/.local/share/applications/firefox.desktop"
+  },
+  "notes": [
+    "This is a package recipe; the upstream Firefox archive is downloaded during installation.",
+    "The package manager must verify the downloaded archive and safely validate archive paths before extraction.",
+    "The latest upstream version is not pinned; repository maintainers should pin a version and checksum for reproducible releases."
+  ]
+}
